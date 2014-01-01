@@ -1,5 +1,6 @@
 FROM ubuntu:12.04
 
+RUN echo 'deb http://cn.archive.ubuntu.com/ubuntu precise main' > /etc/apt/sources.list && apt-get update
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -yq install curl
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -yq install gcc
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -yq install bison
